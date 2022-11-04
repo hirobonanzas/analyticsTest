@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="viewport" meta content="width=devise-width, initial-scale=1">
+  <meta name="description" content="これはHTMLCSSの課題作品です。">
+  <meta name="robots" content="noindex, nofollow">
+  <title>出石に行こう</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header wrapper">
+    <h1>
+      <a href="index.html">
+        <img class="logo" src="images/logo.jpg" alt="出石案内ホーム" title="そうだ！出石へ行こう！">
+      </a>
+    </h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="enjoy.html">あそぶ</a></li>
+        <li><a href="eat.html">たべる</a></li>
+        <li><a href="sightseeing.html">みる</a></li>
+        <li><a href="souvenir.html">かう</a></li>
+        <li><a href="access.html">いく</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="access" class="big-bg wrapper">
+  </div>
+  <!-- ここまでほぼ共通部分 id名のみ変更 -->
+
+
+  <!-- map挿入 -->
+  <section id="location">
+    <div class="location-map">
+      <p>
+        <small>この地図はダミーです。</small>
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15457.754349390305!2d134.8628102292275!3d35.464880257287476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffe7d75265e7ff%3A0x6a48c0200d83a0e5!2z5Ye655-z5Z-O6Leh!5e0!3m2!1sja!2sjp!4v1660876898365!5m2!1sja!2sjp"
+        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="location-info">
+      <h2>出石までのアクセス</h2>
+      <dl>
+        <dt><span><i class="fa-solid fa-train"></i></span> Train</dt>
+        <dd>大阪／京都方面から特急で約2時間30分 JR江原駅で下車。
+          <a href="https://www.jr-odekake.net/railroad/" target="_blank"> JRお出かけネット</a><br>
+          江原駅から全但バス 出石停留所まで。
+          <a href="https://www.zentanbus.co.jp/local_bus/" target="_blank"> 全但バス 一般路線バスのご案内</a><br>
+          もしくは タクシーで出石まで。
+        </dd>
+        <dt><span><i class="fa-solid fa-bus-simple"></i></span> Bus</dt>
+        <dd>大阪／伊丹空港／三宮から江原河畔劇場まで　全但バスで約2時間30分<br><a href="https://www.zentanbus.co.jp/highway_express_bus/"
+            target="_blank">
+            全但バス 高速バスのご案内</a></dd>
+        <dt><span><i class="fa-solid fa-plane"></i></span> Air</dt>
+        <dd>伊丹空港から約35分
+          <a href="https://www.tajima-airport.jp/" target="_blank">コウノトリ但馬空港</a><br>
+          空港から 全但バス もしくは タクシーで出石まで約30分
+        </dd>
+        <dt><span><i class="fa-solid fa-car-side"></i></span> Car</dt>
+        <dd>大阪／京都方面から 約3時間、姫路から約2時間 北近畿豊岡自動車道 日高・神鍋高原IC<br>
+          <a href="http://ihighway.jp/web/map/map06.html" target="_blank">NEXCO西日本ハイウェイ情報</a>
+        </dd>
+        <dt><span><i class="fa-solid fa-taxi"></i></span> Taxi</dt>
+        <dd>JR江原駅から20分 約4,000円<br>
+          コウノトリ但馬空港から30分 約5,000円<br>
+          全但タクシー TEL：0796-22-xxxx<br>日交タクシー TEL：0796-23-xxxx<br>
+          ※常駐していません。<span class="taxi">予約をお勧めします。</span></dd>
+      </dl>
+    </div>
+  </section>
+
+
+
+  <!-- ここから共通 Footer -->
+  <footer>
+    <div class="wrapper">
+      <p>
+        <small>&copy; 2022 hhhyyysss </small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ページ上に戻るボタン -->
+  <div id="gotop">
+    <a href="index.html">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+  </div>
+</body>
+
+</html>

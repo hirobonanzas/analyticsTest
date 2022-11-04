@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="viewport" meta content="width=devise-width, initial-scale=1">
+  <meta name="description" content="これはHTMLCSSの課題作品です。">
+  <meta name="robots" content="noindex, nofollow">
+  <title>出石に行こう</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header wrapper">
+    <h1>
+      <a href="index.html">
+        <img class="logo" src="images/logo.jpg" alt="出石案内ホーム" title="そうだ！出石へ行こう！">
+      </a>
+    </h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="enjoy.html">あそぶ</a></li>
+        <li><a href="eat.html">たべる</a></li>
+        <li><a href="sightseeing.html">みる</a></li>
+        <li><a href="souvenir.html">かう</a></li>
+        <li><a href="access.html">いく</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="eat" class="big-bg">
+  </div>
+  <!-- ここまでほぼ共通部分 id名のみ変更 -->
+
+  <section id="info">
+    <h2>2022年 出石産 新そば解禁まで</h2>
+    <p class="timer">あと
+      <span id="day"></span>日
+      <span id="hour"></span>時間
+      <span id="min"></span>分
+      <span id="sec"></span>秒
+    </p>
+    <h3>地元産の新そばは、希少です！ <br>お早めにお越しください。</h3>
+  </section>
+
+  <!-- <section class="under-cons wrapper">
+    <p>急いで製作中です。<br>
+      しばらくお待ちください。</p>
+  </section> -->
+
+  <section>
+    <div id="shops">
+      <div>
+        <img src="images/e_soba.jpg" class="big-image">
+      </div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+
+  </section>
+
+
+  <!-- ここから共通 Footer -->
+  <footer>
+    <div class="wrapper">
+      <p>
+        <small>&copy; 2022 hhhyyysss </small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ページ上に戻るボタン -->
+  <div id="gotop">
+    <a href="#">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- <script src=js/script.js></script> -->
+  <script>
+    function countdown(due) {
+      const now = new Date();
+      const rest = due.getTime() - now.getTime();
+      const sec = Math.floor(rest / 1000) % 60;
+      const min = Math.floor(rest / 1000 / 60) % 60;
+      const hour = Math.floor(rest / 1000 / 60 / 60) % 24;
+      const day = Math.floor(rest / 1000 / 60 / 60 / 24);
+      const count = [day, hour, min, sec];
+      return count;
+    }
+
+    const goal = new Date(2022, 11, 5);
+    function recalc() {
+      const counter = countdown(goal);
+      // const time = `${counter[0]}日${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+      document.getElementById('day').textContent = counter[0];
+      document.getElementById('hour').textContent = counter[1];
+      document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
+      document.getElementById('sec').textContent = String(counter[3]).padStart(2, '0');
+      refresh();
+    }
+
+    function refresh() {
+      setTimeout(recalc, 1000);
+    }
+    recalc();
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="viewport" meta content="width=devise-width, initial-scale=1">
+  <meta name="description" content="これはHTMLCSSの課題作品です。">
+  <meta name="robots" content="noindex, nofollow">
+  <title>出石に行こう</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header wrapper">
+    <h1>
+      <a href="index.html">
+        <img class="logo" src="images/logo.jpg" alt="出石案内ホーム" title="そうだ！出石へ行こう！">
+      </a>
+    </h1>
+
+    <!-- hamburger & nav.list -->
+    <div id="ham-flex">
+      <input type="checkbox" id="open-close">
+      <!-- hamburger icon area -->
+      <label for="open-close">
+        <!-- hamburger 3 lines -->
+        <span></span>
+      </label>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="enjoy.html">あそぶ</a></li>
+          <li><a href="eat.html">たべる</a></li>
+          <li><a href="sightseeing.html">みる</a></li>
+          <li><a href="souvenir.html">かう</a></li>
+          <li><a href="access.html">いく</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div id="home" class="big-bg wrapper">
+  </div>
+  <!-- ここまでほぼ共通部分 id名のみ変更 -->
+
+  <section class="home-wording wrapper">
+    <p>古い街並みと自然に囲まれた町、<ruby>出石<rt>いずし</rt></ruby><br>
+      「日本書紀」「古事記」にも名前がみられる歴史ある街<br>
+      深い歴史と自然が日々の疲れを癒します<br>
+      日本最古の芝居小屋「永楽館」<br>
+      日本で二番目に古い時計台「辰鼓楼」<br>
+      全国でも珍しい見学できる「家老屋敷」<br>
+      山に、川に、様々な経験ができるアクティビティ<br>
+      但馬の素材を生かし、奇をてらわず、長く愛される食<br>
+      大阪からわずか二時間半で、非日常を楽しめます<br>
+      四季ぞれぞれの豊かな表情を出石で楽しみませんか？</p>
+  </section>
+
+  <div class="wrapper grid">
+    <div class="menu">
+      <a href="enjoy.html">
+        <img src="images/i_you-hou01.jpg" alt="enjoy" title="あそぶ">
+      </a>
+      <p class="menu_name">あそぶ</p>
+    </div>
+    <div class="menu">
+      <a href="eat.html">
+        <img src="images/i_gelato.jpg" alt="eat" title="たべる">
+      </a>
+      <p class="menu_name">たべる</p>
+    </div>
+    <div class="menu">
+      <a href="sightseeing.html">
+        <img src="images/i_torii.jpg" alt="sightseeing" title="みる">
+      </a>
+      <p class="menu_name">みる</p>
+    </div>
+    <div class="menu">
+      <a href="souvenir.html">
+        <img src="images/i_takuan.jpg" alt="souvenior" title="かう">
+      </a>
+      <p class="menu_name">かう</p>
+    </div>
+  </div>
+
+
+  <!-- ここから共通 Footer -->
+  <footer>
+    <div class="wrapper">
+      <p>
+        <small>&copy; 2022 hhhyyysss </small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ページ上に戻るボタン -->
+  <div id="gotop">
+    <a href="#">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <script>
+    'use strict';
+
+    $(function () {
+      var pagetop = $('#gotop');
+      pagetop.hide();
+      $(window.scroll(function () {
+        if ($(this).scrollTop() > 3000) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        };
+      })
+      $('pagetop').click(function () {
+        $('body, html').animate({
+          scrollTop: 0
+        }, 500)
+        return false;
+      })
+    });
+
+  </script>
+</body>
+
+</html>

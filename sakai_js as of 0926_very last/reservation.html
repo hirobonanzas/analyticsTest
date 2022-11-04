@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="viewport" meta content="width=devise-width, initial-scale=1">
+  <meta name="description" content="これはHTMLCSSの課題作品です。">
+  <meta name="robots" content="noindex, nofollow">
+  <title>出石に行こう</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header wrapper">
+    <h1>
+      <a href="index.html">
+        <img class="logo" src="images/logo.jpg" alt="出石案内ホーム" title="そうだ！出石へ行こう！">
+      </a>
+    </h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="enjoy.html">あそぶ</a></li>
+        <li><a href="eat.html">たべる</a></li>
+        <li><a href="sightseeing.html">みる</a></li>
+        <li><a href="souvenir.html">かう</a></li>
+        <li><a href="access.html">いく</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="reservation" class="big-bg">
+  </div>
+  <!-- ここまでほぼ共通部分 id名のみ変更 -->
+
+  <section id="form">
+    <h2>ご予約フォーム</h2>
+    <form action="#" method="post">
+      <table border="1">
+        <tr>
+          <th>
+            <label for="shimei">お名前</label>
+          </th>
+          <td colspan="2">
+            <input type="text" name="user-name" id="user-name" placeholder="例）姓　名" required>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="kana">フリガナ</label>
+          </th>
+          <td colspan="2">
+            <input type="text" name="kana" id="kana">
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="phone">連絡先電話番号</label>
+          </th>
+          <td colspan="2">
+            <input type="tel" name="phone" id="phone">
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="mail">email</label>
+          </th>
+          <td colspan="2">
+            <input type="email" name="email" id="email">
+          </td>
+        </tr>
+        <tr>
+          <th>あそびプログラム</th>
+          <td colspan="2">
+            <input type="radio" name="program" value="wagashi" id="wagashi">
+            <label for="wagashi">和菓子製作</label>
+            <input type="radio" name="program" value="soba" id="soba">
+            <label for="soba">そば打ち</label>
+            <input type="radio" name="program" value="etsuke" id="etsuke">
+            <label for="etsuke">出石焼の絵付け</label>
+            <input type="radio" name="program" value="bag" id="bag">
+            <label for="bag">かばん製作</label>
+            <input type="radio" name="program" value="zazen" id="zazen">
+            <label for="zazen">座禅</label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="date">ご希望日</label>
+          </th>
+          <td colspan="2"><input type="date" name="kibou" id="date"></td>
+        </tr>
+        <tr>
+          <th><label for="time">ご希望時間</label></th>
+          <td colspan="2"><input type="time" name="jikan" id="time"><span> 10:00-17:00の間でご指定ください</span></td>
+        </tr>
+        <tr>
+          <th><label for="adult">参加人数</label></th>
+          <td>大人<input type="number" name="adult" id="adult">名</td>
+          <td>子供<input type="number" name="child" id="child">名</td>
+        </tr>
+        <tr>
+          <th>
+            <label for="t-area">備考欄</label>
+          </th>
+          <td colspan="2">
+            <textarea id="t-area" name="message" placeholder="ご希望など特に伝えたいことがあればご記入ください"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <input type="submit" value="送信">
+            <input type="reset" value="リセット">
+          </td>
+        </tr>
+      </table>
+
+      <!-- ここから共通 Footer -->
+      <footer>
+        <div class="wrapper">
+          <p>
+            <small>&copy; 2022 hhhyyysss </small>
+          </p>
+        </div>
+      </footer>
+    </form>
+  </section>
+</body>
+
+</html>
